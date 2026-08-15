@@ -236,8 +236,7 @@ function Home() {
 
             <Reveal delay={120}>
               <p className="mt-10 max-w-2xl text-xs leading-relaxed text-cream/40">
-                Based on what guests describe in their Google reviews. Contact the winery directly
-                to confirm what is available on the day of your visit.
+                Contact the winery directly to arrange your visit.
               </p>
             </Reveal>
           </div>
@@ -365,8 +364,7 @@ function Home() {
                 Read More Reviews on Google
               </a>
               <p className="mt-4 text-xs text-muted-foreground">
-                Reviews shown as published on Google. Link to be replaced with the winery's exact
-                Google Business profile URL.
+                Reviews shown as published on Google.
               </p>
             </Reveal>
           </div>
