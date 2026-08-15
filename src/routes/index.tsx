@@ -466,16 +466,12 @@ function Home() {
               >
                 Get Directions
               </a>
-              <p className="mt-4 text-xs text-muted-foreground">
-                Map link uses the Plus Code HMRC+3R Asureti — replace with the exact Google Maps URL
-                once provided.
-              </p>
             </Reveal>
           </div>
           <Reveal>
             <iframe
               title="Map showing Bachia Winery in Asureti, Georgia"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=44.55%2C41.55%2C44.65%2C41.63&layer=mapnik"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=44.566%2C41.573%2C44.626%2C41.603&layer=mapnik&marker=41.5878%2C44.5967"
               loading="lazy"
               className="h-[22rem] w-full border-y border-border grayscale-[0.35] sm:h-[30rem]"
             />
