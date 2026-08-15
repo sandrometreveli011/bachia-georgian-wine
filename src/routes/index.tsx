@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Instagram, MapPin, MessageCircle, Phone } from "lucide-react";
 import { SiteNav } from "@/components/SiteNav";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
 import { Reveal } from "@/components/Reveal";
@@ -381,21 +382,30 @@ function Home() {
                 Come experience Bachia Winery
               </h2>
               <dl className="mt-10 space-y-4 text-primary-foreground/85">
-                <div className="flex gap-3">
-                  <dt aria-hidden="true">📍</dt>
-                  <dd>Asureti, Georgia</dd>
+                <div className="flex items-center gap-3">
+                  <dt className="shrink-0">
+                    <MapPin aria-hidden="true" className="h-4 w-4" />
+                    <span className="sr-only">Address</span>
+                  </dt>
+                  <dd className="min-w-0">Asureti, Georgia</dd>
                 </div>
-                <div className="flex gap-3">
-                  <dt aria-hidden="true">📞</dt>
-                  <dd>
+                <div className="flex items-center gap-3">
+                  <dt className="shrink-0">
+                    <Phone aria-hidden="true" className="h-4 w-4" />
+                    <span className="sr-only">Phone</span>
+                  </dt>
+                  <dd className="min-w-0">
                     <a href={PHONE_HREF} className="hover:underline">
                       {PHONE}
                     </a>
                   </dd>
                 </div>
-                <div className="flex gap-3">
-                  <dt aria-hidden="true">💬</dt>
-                  <dd>
+                <div className="flex items-center gap-3">
+                  <dt className="shrink-0">
+                    <MessageCircle aria-hidden="true" className="h-4 w-4" />
+                    <span className="sr-only">WhatsApp</span>
+                  </dt>
+                  <dd className="min-w-0">
                     <a
                       href={WHATSAPP}
                       target="_blank"
@@ -406,9 +416,12 @@ function Home() {
                     </a>
                   </dd>
                 </div>
-                <div className="flex gap-3">
-                  <dt aria-hidden="true">📸</dt>
-                  <dd>
+                <div className="flex items-center gap-3">
+                  <dt className="shrink-0">
+                    <Instagram aria-hidden="true" className="h-4 w-4" />
+                    <span className="sr-only">Instagram</span>
+                  </dt>
+                  <dd className="min-w-0">
                     <a
                       href={INSTAGRAM}
                       target="_blank"
