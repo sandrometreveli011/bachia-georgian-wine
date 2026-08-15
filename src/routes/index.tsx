@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Instagram, MapPin, MessageCircle, Phone } from "lucide-react";
 import { SiteNav } from "@/components/SiteNav";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
 import { Reveal } from "@/components/Reveal";
@@ -122,6 +123,8 @@ function Home() {
             alt="Vineyard rows on the hills near Asureti, Georgia at golden hour"
             width={1920}
             height={1280}
+            fetchPriority="high"
+            decoding="async"
             className="absolute inset-0 h-full w-full scale-105 object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/40" />
@@ -236,8 +239,7 @@ function Home() {
 
             <Reveal delay={120}>
               <p className="mt-10 max-w-2xl text-xs leading-relaxed text-cream/40">
-                Based on what guests describe in their Google reviews. Contact the winery directly
-                to confirm what is available on the day of your visit.
+                Contact the winery directly to arrange your visit.
               </p>
             </Reveal>
           </div>
@@ -365,8 +367,7 @@ function Home() {
                 Read More Reviews on Google
               </a>
               <p className="mt-4 text-xs text-muted-foreground">
-                Reviews shown as published on Google. Link to be replaced with the winery's exact
-                Google Business profile URL.
+                Reviews shown as published on Google.
               </p>
             </Reveal>
           </div>
@@ -381,21 +382,30 @@ function Home() {
                 Come experience Bachia Winery
               </h2>
               <dl className="mt-10 space-y-4 text-primary-foreground/85">
-                <div className="flex gap-3">
-                  <dt aria-hidden="true">📍</dt>
-                  <dd>Asureti, Georgia</dd>
+                <div className="flex items-center gap-3">
+                  <dt className="shrink-0">
+                    <MapPin aria-hidden="true" className="h-4 w-4" />
+                    <span className="sr-only">Address</span>
+                  </dt>
+                  <dd className="min-w-0">Asureti, Georgia</dd>
                 </div>
-                <div className="flex gap-3">
-                  <dt aria-hidden="true">📞</dt>
-                  <dd>
+                <div className="flex items-center gap-3">
+                  <dt className="shrink-0">
+                    <Phone aria-hidden="true" className="h-4 w-4" />
+                    <span className="sr-only">Phone</span>
+                  </dt>
+                  <dd className="min-w-0">
                     <a href={PHONE_HREF} className="hover:underline">
                       {PHONE}
                     </a>
                   </dd>
                 </div>
-                <div className="flex gap-3">
-                  <dt aria-hidden="true">💬</dt>
-                  <dd>
+                <div className="flex items-center gap-3">
+                  <dt className="shrink-0">
+                    <MessageCircle aria-hidden="true" className="h-4 w-4" />
+                    <span className="sr-only">WhatsApp</span>
+                  </dt>
+                  <dd className="min-w-0">
                     <a
                       href={WHATSAPP}
                       target="_blank"
@@ -406,9 +416,12 @@ function Home() {
                     </a>
                   </dd>
                 </div>
-                <div className="flex gap-3">
-                  <dt aria-hidden="true">📸</dt>
-                  <dd>
+                <div className="flex items-center gap-3">
+                  <dt className="shrink-0">
+                    <Instagram aria-hidden="true" className="h-4 w-4" />
+                    <span className="sr-only">Instagram</span>
+                  </dt>
+                  <dd className="min-w-0">
                     <a
                       href={INSTAGRAM}
                       target="_blank"
@@ -466,16 +479,12 @@ function Home() {
               >
                 Get Directions
               </a>
-              <p className="mt-4 text-xs text-muted-foreground">
-                Map link uses the Plus Code HMRC+3R Asureti — replace with the exact Google Maps URL
-                once provided.
-              </p>
             </Reveal>
           </div>
           <Reveal>
             <iframe
               title="Map showing Bachia Winery in Asureti, Georgia"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=44.55%2C41.55%2C44.65%2C41.63&layer=mapnik"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=44.566%2C41.573%2C44.626%2C41.603&layer=mapnik&marker=41.5878%2C44.5967"
               loading="lazy"
               className="h-[22rem] w-full border-y border-border grayscale-[0.35] sm:h-[30rem]"
             />
